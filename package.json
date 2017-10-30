@@ -1,0 +1,45 @@
+{
+  "name": "gao-backend",
+  "description": "Gap Pool Backend",
+  "author": "yuanchao",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --env.dev",
+    "build": "rimraf dist && webpack -p --progress --hide-modules",
+    "sync": "npm-run webpack && npm-run node build/bte.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "co": "^4.6.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.1.0",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "log4js": "^2.3.9",
+    "mongoose": "^4.12.4",
+    "npm-run": "^4.1.2",
+    "truffle": "^3.4.11",
+    "truffle-contract": "^3.0.0",
+    "web3": "^0.20.1"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "colors": "^1.1.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^2.4.1"
+  }
+}
